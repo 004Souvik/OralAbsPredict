@@ -98,7 +98,7 @@ def process_smiles(smiles_list, add_hs=True, kekulize=True):
 
 def mord_descriptors(mol):
     eta_calc = Calculator([ExtendedTopochemicalAtom, AcidBase, Aromatic, AtomCount, BondCount,
-                           CarbonTypes, Constitutional, EState, HydrogenBond, Lipinski, LogS, PathCount, Polarizability,
+                           CarbonTypes, Constitutional, EState, HydrogenBond, Lipinski, PathCount, Polarizability,
                            RingCount, RotatableBond, SLogP, TopoPSA, Weight], ignore_3D=True)
     descriptors = eta_calc(mol)
     return descriptors.asdict() 
