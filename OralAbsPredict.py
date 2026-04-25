@@ -331,7 +331,7 @@ elif st.session_state.page == "prediction":
         
         exp_data = pd.read_excel("https://raw.githubusercontent.com/004Souvik/OralAbsPredict/main/lib/sample_file.xlsx")
         buffer = io.BytesIO()
-        with pd.ExcelWriter(buffer, engine='xlsxwriter') as writer:
+        with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
             exp_data.to_excel(writer, index=False)
 
         buffer.seek(0)
