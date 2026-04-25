@@ -329,7 +329,7 @@ elif st.session_state.page == "prediction":
     with tab2:
         st.write("Predict HIA & HOB for multiple molecules by uploading a .xlsx file with SMILES strings.")
         
-        exp_data = pd.read_excel("lib\\sample_file.xlsx")
+        exp_data = pd.read_excel("https://raw.githubusercontent.com/004Souvik/OralAbsPredict/main/lib/sample_file.xlsx")
         buffer = io.BytesIO()
         with pd.ExcelWriter(buffer, engine='xlsxwriter') as writer:
             exp_data.to_excel(writer, index=False)
