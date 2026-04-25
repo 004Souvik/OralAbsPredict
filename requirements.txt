@@ -7,3 +7,4 @@ mordred
 joblib
 scikit-learn
 openpyxl
+xlsxwriter
