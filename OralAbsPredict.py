@@ -143,12 +143,12 @@ def standardizer(df1, df2):
     return (df1-avg)/stdev, (df2-avg)/stdev
 
 
-hia_model = joblib.load("lib\\hia.joblib")
-hob50_model = joblib.load("lib\\hob_50.joblib")
-hob20_model = joblib.load("lib\\hob_20.joblib")
-hia_tr = pd.read_excel("lib\\hia.xlsx", index_col=0)
-hob50_tr = pd.read_excel("lib\\hob_50.xlsx", index_col=0)
-hob20_tr = pd.read_excel("lib\\hob_20.xlsx", index_col=0)
+hia_model = joblib.load("https://github.com/004Souvik/OralAbsPredict/tree/main/lib/hia.joblib")
+hob50_model = joblib.load("https://github.com/004Souvik/OralAbsPredict/tree/main/lib/hob_50.joblib")
+hob20_model = joblib.load("https://github.com/004Souvik/OralAbsPredict/tree/main/lib/hob_20.joblib")
+hia_tr = pd.read_excel("https://github.com/004Souvik/OralAbsPredict/tree/main/lib/hia.xlsx", index_col=0)
+hob50_tr = pd.read_excel("https://github.com/004Souvik/OralAbsPredict/tree/main/lib/hob_50.xlsx", index_col=0)
+hob20_tr = pd.read_excel("https://github.com/004Souvik/OralAbsPredict/tree/main/lib/hob_20.xlsx", index_col=0)
 hiaxtr = hia_tr.iloc[:,:-1]
 hob50xtr = hob50_tr.iloc[:,:-1]
 hob20xtr = hob20_tr.iloc[:,:-1]
