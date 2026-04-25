@@ -5,3 +5,4 @@ numpy
 rdkit
 mordred
 joblib
+scikit-learn
