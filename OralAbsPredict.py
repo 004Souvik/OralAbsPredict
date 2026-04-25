@@ -266,7 +266,7 @@ def load_file(uploaded_data):
     return None
 
 
-st.set_page_config(layout="wide", page_title="OralAbsPredict", page_icon="lib\\dtc.ico")
+st.set_page_config(layout="wide", page_title="OralAbsPredict", page_icon="https://raw.githubusercontent.com/004Souvik/OralAbsPredict/main/lib/dtc.ico")
 
 
 if "page" not in st.session_state:
