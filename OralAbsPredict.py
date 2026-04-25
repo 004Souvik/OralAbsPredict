@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 import numpy as np
 from rdkit import Chem
-import io
+import requests, joblib, io
 from PIL import Image
 from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit.Chem import AllChem
@@ -12,6 +12,11 @@ from mordred import Calculator
 from mordred import ExtendedTopochemicalAtom, AcidBase, Aromatic, AtomCount, BondCount
 from mordred import CarbonTypes, Constitutional, EState, HydrogenBond, Lipinski, PathCount, Polarizability
 from mordred import RingCount, RotatableBond, SLogP, TopoPSA, Weight
+
+def load_joblib_from_url(url):
+    r = requests.get(url)
+    r.raise_for_status()
+    return joblib.load(io.BytesIO(r.content))
 
 
 
@@ -143,9 +148,9 @@ def standardizer(df1, df2):
     return (df1-avg)/stdev, (df2-avg)/stdev
 
 
-hia_model = joblib.load("https://raw.githubusercontent.com/004Souvik/OralAbsPredict/main/lib/hia.joblib")
-hob50_model = joblib.load("https://raw.githubusercontent.com/004Souvik/OralAbsPredict/main/lib/hob_50.joblib")
-hob20_model = joblib.load("https://raw.githubusercontent.com/004Souvik/OralAbsPredict/main/lib/hob_20.joblib")
+hia_model = load_joblib_from_url("https://raw.githubusercontent.com/004Souvik/OralAbsPredict/main/lib/hia.joblib")
+hob50_model = load_joblib_from_url("https://raw.githubusercontent.com/004Souvik/OralAbsPredict/main/lib/hob_50.joblib")
+hob20_model = load_joblib_from_url("https://raw.githubusercontent.com/004Souvik/OralAbsPredict/main/lib/hob_20.joblib")
 hia_tr = pd.read_excel("https://raw.githubusercontent.com/004Souvik/OralAbsPredict/main/lib/hia.xlsx", index_col=0)
 hob50_tr = pd.read_excel("https://raw.githubusercontent.com/004Souvik/OralAbsPredict/main/lib/hob_50.xlsx", index_col=0)
 hob20_tr = pd.read_excel("https://raw.githubusercontent.com/004Souvik/OralAbsPredict/main/lib/hob_20.xlsx", index_col=0)
