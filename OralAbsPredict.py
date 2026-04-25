@@ -393,7 +393,7 @@ elif st.session_state.page == "contact":
         footer {visibility: hidden;}
         </style>
         <div class="footer">
-        <p>Found an issue? email at souvikpore123@gmail.com with subject 'HIA-HOB Predictor Bug'.</p>
+        <p>Found an issue? email at souvikpore123@gmail.com with subject 'OralAbsPredict Bug'.</p>
         </div>
         """
     st.markdown(hide_footer_style, unsafe_allow_html=True)
