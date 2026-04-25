@@ -163,7 +163,7 @@ hob50ytr = hob50_tr.iloc[:,-1]
 hob20ytr = hob20_tr.iloc[:,-1]
 
 
-des_list = pd.read_excel("lib\\des_list.xlsx")
+des_list = pd.read_excel("https://raw.githubusercontent.com/004Souvik/OralAbsPredict/main/lib/des_list.xlsx")
 hia_des = des_list["HIA"].dropna().tolist()
 hob50_des = des_list["HOB_50"].dropna().tolist()
 hob20_des = des_list["HOB_20"].dropna().tolist()
