@@ -10,7 +10,7 @@ from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit.Chem import AllChem
 from mordred import Calculator
 from mordred import ExtendedTopochemicalAtom, AcidBase, Aromatic, AtomCount, BondCount
-from mordred import CarbonTypes, Constitutional, EState, HydrogenBond, Lipinski, LogS, PathCount, Polarizability
+from mordred import CarbonTypes, Constitutional, EState, HydrogenBond, Lipinski, PathCount, Polarizability
 from mordred import RingCount, RotatableBond, SLogP, TopoPSA, Weight
 
 
