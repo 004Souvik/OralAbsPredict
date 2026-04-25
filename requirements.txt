@@ -6,3 +6,4 @@ rdkit
 mordred
 joblib
 scikit-learn
+openpyxl
